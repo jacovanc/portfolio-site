@@ -22,8 +22,22 @@
 	.clear {
 		clear: both;
 	}
+	.logo-img {
+		height: 32px;
+		vertical-align: middle
+	}
+	.logo-img.linkedin {
+		height: 32px;
+	}
 	body {
 		margin: 0;
+	}
+	a {
+		color: #4457ff;
+		text-decoration: none;
+	}
+	a:hover {
+		text-decoration: underline;
 	}
 	#app {
 		font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -32,8 +46,12 @@
 		text-align: center;
 		color: #2c3e50;
 	}
+	.outer-wrapper {
+		padding: 15px;
+	}
 	.inner-wrapper {
 		width: 840px;
+		max-width: 100%;
 		margin: 0 auto;
 		text-align: left;
 	}
@@ -71,5 +89,18 @@
 
 	#nav .links a.router-link-exact-active {
 		color: #4457ff;
+	}
+	@media screen and (max-width: 530px) {
+		#nav {
+			text-align: left;
+		}
+		#nav .site-title {
+			display: block;
+			float: none;
+		}
+		#nav .links {
+			float: none;
+			display: block;
+		}
 	}
 </style>
