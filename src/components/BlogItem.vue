@@ -35,7 +35,7 @@
 		text-decoration: none;
 		font-size: 15px;
 		margin-bottom: 15px;
-		display: block;
+		display: inline-block;
 
 		transition: 0.2s ease;
 
@@ -50,5 +50,8 @@
 	}
 	.blog-item span {
 		font-style: italic;
+	}
+	.blog-item .description {
+		margin-top: 3px;
 	}
 </style>

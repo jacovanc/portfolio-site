@@ -5,13 +5,10 @@
 				Jaco van Cranenburgh
 			</router-link>
 			<div class="links">
-				<router-link to="/">Home</router-link> |
-				<router-link to="/about">About</router-link> |
+				<router-link to="/">About</router-link> |
 				<router-link to="/portfolio">Portfolio</router-link> |
-				<router-link to="/blog">Writing</router-link>
-				<!-- <router-link to="/cv">CV</router-link> -->
+				<router-link to="/blog">Blog</router-link>
 			</div>
-		
 			<div class="clear"></div>
 		</div>
 		<div class="outer-wrapper">

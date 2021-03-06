@@ -1,5 +1,5 @@
 <template>
-	Another change
+	Work in progress!
 </template>
 
 <script>

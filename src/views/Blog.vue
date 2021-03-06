@@ -3,7 +3,7 @@
 		<h1>Writing</h1>
 		<div class="content">
 			<p>I occasionally write about Bitcoin, language-learning and anything else that interests me. </p>
-			<p>This is mostly an excercise for improving my written skills and ability to express myself, but if you're interested you can find these below.</p>
+			<p>This is mostly an exercise to improve my written skills, ability to express myself, while giving me a platform to talk about things that people seem to roll their eyes at when I bring them up at parties 🤷. But if you're interested you can find these below.</p>
 		</div>
 		<div class="blog-items">
 			<BlogItem v-for="BlogPost in BlogItems" :key="BlogPost.id" :BlogPost="BlogPost"/>
