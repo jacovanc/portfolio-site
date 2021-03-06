@@ -1,6 +1,6 @@
 <template>
-	<div class="home">
-		Test change for testing branching
+	<div class="inner-wrapper home">
+		<h1>Working title</h1>
 	</div>
 </template>
 

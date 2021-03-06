@@ -1,6 +1,5 @@
 <template>
 	Another change
-
 </template>
 
 <script>
@@ -9,6 +8,7 @@ export default {
 	props: {
 		mobileImage: String,
 		DesktopImage: String,
+		text: String,
 	}
 };
 </script>
