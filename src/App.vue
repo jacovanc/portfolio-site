@@ -1,5 +1,5 @@
 <template>
-	<div class="main-wrapper">
+	<div class="main-wrapper" id="touchsurface" v-on:touchstart="touchStart" v-on:touchend="touchEnd">
 		<div id="nav">
 			<div class="inner-wrapper">
 				<router-link to="/" class="site-title">
@@ -13,7 +13,7 @@
 				<div class="clear"></div>
 			</div>
 		</div>
-		<div class="outer-wrapper" id="touchsurface" v-on:touchstart="touchStart" v-on:touchend="touchEnd">
+		<div class="outer-wrapper">
 			<router-view />
 			<div class="back-to-top" v-on:click="backToTop"></div>
 		</div>
@@ -125,8 +125,8 @@ export default {
 	.outer-wrapper {
 		padding: 15px;
 		padding-bottom: 60px;
-		min-height: 100%;
 		position: relative;
+		box-sizing: border-box;
 	}
 	.inner-wrapper {
 		width: 840px;
