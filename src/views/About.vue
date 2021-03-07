@@ -1,9 +1,11 @@
 <template>
 	<div class="inner-wrapper about">
 		<h1>About</h1>
-		<img class="profile-img" :src="`${publicPath}me.jpg`" alt="This is a picture of me - please don't spend too much time looking at it.">
+		<div class="profile-img-container">
+			<img class="profile-img" :src="`${publicPath}me.jpg`" alt="This is a picture of me - please don't spend too much time looking at it.">
+		</div>
 		<p>
-			I'm a Web Developer with a particular interest in decentralized systems (and a fascinated by Bitcoin). <br/>
+			I'm a Web Developer with a particular interest in decentralized systems (and fascinated by Bitcoin). <br/>
 			Born and raised in London - but half British + Dutch (just don't ask me to try speak it... I know much more German at this point!).
 		</p>
 		<h2>Work</h2>
@@ -46,22 +48,23 @@ export default {
 </script>
 
 <style scoped>
-	.about .profile-img {
-		float: right;
+	.about .profile-img-container {
 		width: 250px;
+		height: 250px;
+		overflow: hidden;
 		margin-left: 15px;
+		border-radius: 50%;
+		float: right;
+	}
+	.about .profile-img {
+		width: 100%;
 	}
 	@media screen and (max-width: 500px) {
-		.about .profile-img {
+		.about .profile-img-container {
 			float: none;
 			width: 250px;
 			margin: 0 auto;
 			display: block;
-		}
-	}
-	@media screen and (max-width: 380px) {
-		.about .profile-img {
-			width: 100%;
 		}
 	}
 </style>
