@@ -30,7 +30,7 @@ export default {
 			distY: null,
 			threshold: 150,
 			restraint: 100,
-			allowedTime: 300,
+			allowedTime: 500,
 			elapsedTime: null,
 			startTime: null,
 
@@ -53,7 +53,6 @@ export default {
 			this.startX = touchobj.pageX
 			this.startY = touchobj.pageY
 			this.startTime = new Date().getTime() // record time when finger first makes contact with surface
-			// e.preventDefault()
 		},	
 		touchEnd: function(e){
 			var touchobj = e.changedTouches[0]

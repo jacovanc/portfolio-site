@@ -13,7 +13,10 @@ const routes = [
 	{
 		path: "/",
 		name: "About",
-		component: About
+		component: About,
+		meta: {
+			title: 'Jaco van Cranenburgh',
+		},
 	},
 	{
 		path: "/portfolio",
