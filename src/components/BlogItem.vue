@@ -24,11 +24,12 @@
 </script>
 
 <style scoped>
-	.blog-item:visited,
-	.blog-item:hover,
-	.blog-item:focus,
-	.blog-item:hover, 
-	.blog-item:active { 
+	a.blog-item,
+	a.blog-item:visited,
+	a.blog-item:hover,
+	a.blog-item:focus,
+	a.blog-item:hover, 
+	a.blog-item:active { 
 		text-decoration: none; color:inherit; 
 	}
 	.blog-item {

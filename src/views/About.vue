@@ -2,7 +2,7 @@
 	<div class="inner-wrapper about">
 		<h1>About</h1>
 		<div class="profile-img-container">
-			<img class="profile-img" :src="`${publicPath}me.jpg`" alt="This is a picture of me - please don't spend too much time looking at it.">
+			<img class="profile-img" src="@/assets/me.jpg" alt="This is a picture of me - please don't spend too much time looking at it.">
 		</div>
 		<p>
 			I'm a Web Developer with a particular interest in decentralized systems (and fascinated by Bitcoin). <br/>
@@ -20,20 +20,23 @@
 			</ul>
 		</p>
 		<h2>Contact</h2>
-		<p>You can find me on 
+		<p>
 			<a href="https://twitter.com/Jac0van" target="_blank" alt="Link to Twitter">
+				<img class="logo-img twitter" src="@/assets/twitter.png" alt="Twitter Icon">
 				Twitter
-				<img class="logo-img twitter" :src="`${publicPath}twitter.png`" alt="Twitter Icon">
-			</a> - add me on 
+			</a>
+		</p>
+		<p>
 			<a href="https://www.linkedin.com/in/jacovan/" target="_blank" alt="Link to LinkedIn">
+				<img class="logo-img linkedin" src="@/assets/linkedin.png" alt="LinkedIn Icon">
 				LinkedIn
-				<img class="logo-img linkedin" :src="`${publicPath}linkedin.png`" alt="LinkedIn Icon">
-			</a> or shoot me an email at jacovancr[at]gmail[dot]com</p>
+			</a>
+		</p> 
+		<p>or shoot me an email at jacovancr[at]gmail[dot]com</p>
 		<h2>This site</h2>
 		<p>
 			This site is hosted in a decentralized fashion, by being a static site and utilising IPFS (InterPlanetary File System - great name) for hosting without the need for a single, centralized service.
 			The only remaining challenge is the domain name. 
-			<!-- This site can be accessed by both ____ and ____ - the latter being decentralized, but unfortunately requiring ____ in order to work. -->
 		</p>
 	</div>
 </template>
@@ -41,7 +44,8 @@
 export default {
 	data() {
 		return {
-			publicPath: process.env.BASE_URL
+			publicPath: process.env.BASE_URL,
+			profileImage: "@/assets/me.jpg"
 		}
 	},
 	created () {

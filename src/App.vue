@@ -15,6 +15,7 @@
 		</div>
 		<div class="outer-wrapper" id="touchsurface" v-on:touchstart="touchStart" v-on:touchend="touchEnd">
 			<router-view />
+			<div class="back-to-top" v-on:click="backToTop"></div>
 		</div>
 	</div>
 </template>
@@ -47,23 +48,23 @@ export default {
 	},
 	methods: {
 		// Handle swiping listener for route changes on mobile
-		touchStart: function(e){
-			var touchobj = e.changedTouches[0]
-			this.swipedir = 'none'
-			this.startX = touchobj.pageX
-			this.startY = touchobj.pageY
-			this.startTime = new Date().getTime() // record time when finger first makes contact with surface
+		touchStart: function(e) {
+			var touchobj = e.changedTouches[0];
+			this.swipedir = 'none';
+			this.startX = touchobj.pageX;
+			this.startY = touchobj.pageY;
+			this.startTime = new Date().getTime(); // record time when finger first makes contact with surface
 		},	
-		touchEnd: function(e){
-			var touchobj = e.changedTouches[0]
-			this.distX = touchobj.pageX - this.startX // get horizontal dist traveled by finger while in contact with surface
-			this.distY = touchobj.pageY - this.startY // get vertical dist traveled by finger while in contact with surface
-			this.elapsedTime = new Date().getTime() - this.startTime // get time elapsed
-			if (this.elapsedTime <= this.allowedTime){ // first condition for awipe met
-				if (Math.abs(this.distX) >= this.threshold && Math.abs(this.distY) <= this.restraint){ // 2nd condition for horizontal swipe met
+		touchEnd: function(e) {
+			var touchobj = e.changedTouches[0];
+			this.distX = touchobj.pageX - this.startX; // get horizontal dist traveled by finger while in contact with surface
+			this.distY = touchobj.pageY - this.startY; // get vertical dist traveled by finger while in contact with surface
+			this.elapsedTime = new Date().getTime() - this.startTime; // get time elapsed
+			if (this.elapsedTime <= this.allowedTime) { // first condition for awipe met
+				if (Math.abs(this.distX) >= this.threshold && Math.abs(this.distY) <= this.restraint) { // 2nd condition for horizontal swipe met
 					this.swipedir = (this.distX < 0)? 'left' : 'right' // if dist traveled is negative, it indicates left swipe
 				}
-				else if (Math.abs(this.distY) >= this.threshold && Math.abs(this.distX) <= this.restraint){ // 2nd condition for vertical swipe met
+				else if (Math.abs(this.distY) >= this.threshold && Math.abs(this.distX) <= this.restraint) { // 2nd condition for vertical swipe met
 					this.swipedir = (this.distY < 0)? 'up' : 'down' // if dist traveled is negative, it indicates up swipe
 				}
 			}
@@ -77,6 +78,9 @@ export default {
 					this.$router.push(this.nextRoute);
 				}
 			}
+		},
+		backToTop: function() {
+			window.scrollTo({top: 0, behavior: 'smooth'});
 		}
 	}
 }
@@ -84,8 +88,8 @@ export default {
 
 
 <style>
-	body {
-		height: 100vh;
+	html, body {
+		height: 100%;
 	}
 	#app, .main-wrapper {
 		height: 100%;
@@ -120,7 +124,9 @@ export default {
 	}
 	.outer-wrapper {
 		padding: 15px;
-		height: 100%;
+		padding-bottom: 60px;
+		min-height: 100%;
+		position: relative;
 	}
 	.inner-wrapper {
 		width: 840px;
@@ -130,8 +136,14 @@ export default {
 	}
 	h1 {
 		text-align: center;
+		margin-bottom: 0.3em;
 	}
-
+	h2 {
+		margin-bottom: 0.3em;
+	}
+	p {
+		margin: 0.5em 0;
+	}
 	/* Layout  */
 	#nav {
 		padding: 20px 30px;
@@ -164,6 +176,39 @@ export default {
 		color: #4457ff;
 	}
 
+	.back-to-top {
+		width: 25px;
+		height: 25px;
+
+		margin: 0 auto;
+		position: absolute;
+		bottom: 10px;
+		left: 50%;
+
+		border: solid #bfbfbf;
+		border-width: 0 3px 3px 0;
+		display: inline-block;
+		padding: 3px;
+		transform: translate(-50%) rotate(-135deg);
+		-webkit-transform: translate(-50%) rotate(-135deg);
+		
+		animation: pulse 5s infinite;
+	}
+
+	@keyframes pulse {
+		0% {
+			transform: translate(-50%) rotate(-135deg) scale(1);
+			-webkit-transform: translate(-50%) rotate(-135deg) scale(1);
+		}
+		10% {
+			transform: translate(-50%) rotate(-135deg) scale(1.2);
+			-webkit-transform: translate(-50%) rotate(-135deg) scale(1.2);
+		}
+		20% {
+			transform: translate(-50%) rotate(-135deg) scale(1);
+			-webkit-transform: translate(-50%) rotate(-135deg) scale(1);
+		}
+	}
 	@media screen and (max-width: 530px) {
 		#nav {
 			text-align: left;
