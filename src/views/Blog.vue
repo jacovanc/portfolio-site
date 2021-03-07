@@ -50,6 +50,9 @@
 					return (b.id) - (a.id);
 				})
 			}
+		},
+		created () {
+			document.title = "Blog - Jaco van Cranenburgh";
 		}
 	}
 </script>

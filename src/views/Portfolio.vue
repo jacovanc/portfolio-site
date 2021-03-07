@@ -14,5 +14,8 @@
 		components: {
 			WebsiteDisplay
 		},
+		created() {
+			document.title = "Portfolio - Jaco van Cranenburgh";
+		}
 	};
 </script>

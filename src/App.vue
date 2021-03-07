@@ -28,7 +28,7 @@ export default {
 			startY: null,
 			distX: null,
 			distY: null,
-			threshold: 150,
+			threshold: 100,
 			restraint: 100,
 			allowedTime: 500,
 			elapsedTime: null,

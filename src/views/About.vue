@@ -43,6 +43,9 @@ export default {
 		return {
 			publicPath: process.env.BASE_URL
 		}
+	},
+	created () {
+		document.title = "Jaco van Cranenburgh";
 	}
 }
 </script>
