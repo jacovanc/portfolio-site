@@ -36,7 +36,7 @@ export default {
 			elapsedTime: null,
 			startTime: null,
 
-			pages: ["/", "/portfolio", "/blog"],
+			pages: ["/", "/blog"],
 
 			largeContent: false,
 
