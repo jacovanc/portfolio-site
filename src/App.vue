@@ -7,15 +7,16 @@
 				</router-link>
 				<div class="links">
 					<router-link to="/">About</router-link> |
-					<router-link to="/portfolio">Portfolio</router-link> |
-					<router-link to="/blog">Blog</router-link>
+					<!-- <router-link to="/portfolio">Portfolio</router-link> | -->
+					<router-link to="/blog">Blog</router-link> |
+					<a :href="`${urlCV}`" target="_blank">CV</a>
 				</div>
 				<div class="clear"></div>
 			</div>
 		</div>
 		<div class="outer-wrapper">
 			<router-view />
-			<div class="back-to-top" v-on:click="backToTop"></div>
+			<!-- <div class="back-to-top" v-if="largeContent" v-on:click="backToTop"></div> -->
 		</div>
 	</div>
 </template>
@@ -36,6 +37,15 @@ export default {
 			startTime: null,
 
 			pages: ["/", "/portfolio", "/blog"],
+
+			largeContent: false,
+
+			urlCV: process.env.BASE_URL + "/jaco-van-cranenburgh-CV.pdf"
+		}
+	},
+	created() {
+		if(window.location.protocol != 'https:' && window.location.href.includes('jacovan')) {
+			location.href =   location.href.replace("http://", "https://");
 		}
 	},
 	computed: {
@@ -44,7 +54,7 @@ export default {
 		},
 		pageIndex() {
 			return this.pages.indexOf(this.currentRoute);
-		}
+		},
 	},
 	methods: {
 		// Handle swiping listener for route changes on mobile
@@ -184,6 +194,7 @@ export default {
 		position: absolute;
 		bottom: 10px;
 		left: 50%;
+		cursor: pointer;
 
 		border: solid #bfbfbf;
 		border-width: 0 3px 3px 0;

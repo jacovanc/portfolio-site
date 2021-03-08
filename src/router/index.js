@@ -1,7 +1,7 @@
 import { createRouter, createWebHashHistory } from "vue-router";
 // import Home from "../views/Home.vue";
 import About from "../views/About.vue";
-import Portfolio from "../views/Portfolio.vue";
+// import Portfolio from "../views/Portfolio.vue";
 import Blog from "../views/Blog.vue";
 
 const routes = [
@@ -18,11 +18,11 @@ const routes = [
 			title: 'Jaco van Cranenburgh',
 		},
 	},
-	{
-		path: "/portfolio",
-		name: "Portfolio",
-		component: Portfolio
-	},
+	// {
+	// 	path: "/portfolio",
+	// 	name: "Portfolio",
+	// 	component: Portfolio
+	// },
 	{
 		path: "/blog",
 		name: "Blog",
