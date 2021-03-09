@@ -31,14 +31,6 @@
 						link: "https://jacovan.medium.com/why-and-how-you-should-learn-to-touch-type-81633be92504"
 					},
 					{
-						id: 1,
-						title: "Why you shouldn't buy Bitcoin",
-						platform: "Medium",
-						date: "4th January 2021",
-						description: "My experience with the Bitcoin 'hype-cycle', the importance of due-diligence and avoiding convictionless investments.",
-						link: "https://jacovan.medium.com/why-you-shouldnt-buy-bitcoin-e42cd96a02"
-					},
-					{
 						id: 2,
 						title: "Duolingo, what is it good for?",
 						platform: "Medium",
