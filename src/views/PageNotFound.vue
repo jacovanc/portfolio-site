@@ -1,0 +1,29 @@
+<template>
+	<div class="inner-wrapper page-not-found">
+		<h1>404 - Page not found</h1>
+		<div class="content">
+			Looks like this page does not exist! Try clicking one of the links above.
+		</div>
+	</div>
+</template>
+
+<script>
+
+	export default {
+		name: 'Blog',
+		data() {
+			return {
+				
+			}
+		},
+		created () {
+			document.title = "404 - Jaco van Cranenburgh";
+		}
+	}
+</script>
+
+<style scoped>
+	.content {
+		text-align: center;
+	}
+</style>

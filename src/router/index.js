@@ -3,6 +3,7 @@ import { createRouter, createWebHashHistory } from "vue-router";
 import About from "../views/About.vue";
 // import Portfolio from "../views/Portfolio.vue";
 import Blog from "../views/Blog.vue";
+import PageNotFound from "../views/PageNotFound.vue";
 
 const routes = [
 	// {
@@ -28,6 +29,11 @@ const routes = [
 		name: "Blog",
 		component: Blog
 	},
+	{
+		path: "/:pathMatch(.*)*",
+		name: "404",
+		component: PageNotFound
+	}
 ];
 
 const router = createRouter({
