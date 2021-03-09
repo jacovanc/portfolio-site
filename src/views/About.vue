@@ -43,7 +43,7 @@ export default {
 	data() {
 		return {
 			profileImage: "@/assets/me.jpg",
-			urlCV: process.env.BASE_URL + "/jaco-van-cranenburgh-CV.pdf" // TODO: Make this global/stored in one place
+			urlCV: process.env.BASE_URL + "jaco-van-cranenburgh-CV.pdf" // TODO: Make this global/stored in one place
 		}
 	},
 	created () {

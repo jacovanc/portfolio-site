@@ -40,7 +40,7 @@ export default {
 
 			largeContent: false,
 
-			urlCV: process.env.BASE_URL + "/jaco-van-cranenburgh-CV.pdf"
+			urlCV: process.env.BASE_URL + "jaco-van-cranenburgh-CV.pdf"
 		}
 	},
 	created() {
