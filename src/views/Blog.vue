@@ -38,6 +38,16 @@
 						description: "Some of my thoughts on app-based language learning and why they are useful.",
 						link: "https://jacovan.medium.com/duolingo-what-is-it-good-for-e5e5d25c3009"
 					},
+					{
+						id: 3,
+						title: "The case for Bitcoin Maximalism",
+						platform: "Medium",
+						date: "10th March 2021",
+						description: "A look at the most valid arguments that Bitcoin is the only cryptocurrency that matters.",
+						link: "https://jacovan.medium.com/the-case-for-bitcoin-maximalism-78c8d0c7b369"
+					},
+
+					
 				].sort(function(a, b) {
 					return (b.id) - (a.id);
 				})
