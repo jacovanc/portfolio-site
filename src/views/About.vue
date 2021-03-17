@@ -30,7 +30,7 @@
 				LinkedIn
 			</a>
 		</p> 
-		<p>or shoot me an email at jacovancr[at]gmail[dot]com</p>
+		<p>or shoot me an email at <a href="mailto:jacovancr@gmail.com">jacovancr@gmail.com</a></p>
 		<h2>This site</h2>
 		<p>
 			This site is hosted in a decentralized fashion by being a static site and utilising IPFS (InterPlanetary File System - great name) for hosting without the need for a single, centralized service.
