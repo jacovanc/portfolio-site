@@ -46,6 +46,14 @@
 						description: "A look at the most valid arguments that Bitcoin is the only cryptocurrency that matters.",
 						link: "https://jacovan.medium.com/the-case-for-bitcoin-maximalism-78c8d0c7b369"
 					},
+					{
+						id: 4,
+						title: "Hosting a Decentralized Website with IPFS",
+						platform: "Medium",
+						date: "23rd April 2021",
+						description: "My experience hosting a website on IPFS and how you can too.",
+						link: "https://jacovan.medium.com/hosting-a-decentralized-website-with-ipfs-7cbc0fc2cef5"
+					},
 
 					
 				].sort(function(a, b) {
