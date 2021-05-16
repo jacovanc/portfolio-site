@@ -19,12 +19,6 @@
 		<p>If you'd like to know more about my skills/experience, feel free to take a look at my <a :href="`${urlCV}`" target="_blank">CV</a>.</p>
 		<h2>Contact</h2>
 		<p>
-			<a href="https://twitter.com/Jac0van" target="_blank" alt="Link to Twitter">
-				<img class="logo-img twitter" src="@/assets/twitter.png" alt="Twitter Icon">
-				Twitter
-			</a>
-		</p>
-		<p>
 			<a href="https://www.linkedin.com/in/jacovan/" target="_blank" alt="Link to LinkedIn">
 				<img class="logo-img linkedin" src="@/assets/linkedin.png" alt="LinkedIn Icon">
 				LinkedIn
